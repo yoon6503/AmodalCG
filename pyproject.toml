@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "amodalcg"
+version = "0.1.0"
+description = "Integrating Multimodal Large Language Model Knowledge into Amodal Completion"
+readme = "README.md"
+requires-python = ">=3.9"
+
+[tool.setuptools]
+packages = ["amodalcg"]

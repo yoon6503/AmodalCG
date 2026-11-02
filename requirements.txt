@@ -1,0 +1,30 @@
+# PyTorch (install the build matching your CUDA version first: https://pytorch.org)
+torch>=2.0
+torchvision
+
+# Completion pipeline
+diffusers>=0.25,<0.32
+transformers>=4.46
+accelerate
+segment-anything @ git+https://github.com/facebookresearch/segment-anything.git
+opencv-python
+numpy
+Pillow
+tqdm
+
+# InstaOrder (third_party/InstaOrder)
+scikit-image
+scikit-learn
+matplotlib
+
+# Guidance Decision Module (InternVL3.5); flash-attn is optional
+einops
+timm
+sentencepiece
+
+# Geometric / Semantic Guidance Modules
+openai>=1.40
+
+# Data preparation and evaluation
+pycocotools
+clip @ git+https://github.com/openai/CLIP.git

@@ -153,6 +153,7 @@ This code builds on [Stable Diffusion](https://github.com/Stability-AI/stabledif
 [InstaOrder](https://github.com/POSTECH-CVLab/InstaOrder),
 [InternVL](https://github.com/OpenGVLab/InternVL), and
 [Amodal Completion via Progressive Mixed Context Diffusion](https://github.com/k8xu/amodal).
+The clean background image `assets/gray_wallpaper.jpeg` is taken from the latter.
 
 ## Citation
 

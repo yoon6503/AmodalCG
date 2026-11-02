@@ -2,8 +2,6 @@
 
 Official implementation of **AmodalCG** ([arXiv:2603.28333](https://arxiv.org/abs/2603.28333)).
 
-Heecheol Yun, Eunho Yang
-
 AmodalCG uses a Multimodal Large Language Model (MLLM) to guide amodal completion. It first decides
 whether a target object is occluded heavily enough to need guidance. When it is, the MLLM estimates the
 **extent** of the full object (bounding boxes) and describes the **content** of the missing region (a text

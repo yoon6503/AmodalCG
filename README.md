@@ -8,18 +8,9 @@ whether a target object is occluded heavily enough to need guidance. When it is,
 prompt). A visual generative model then completes the object using this guidance. Because the guidance can be
 wrong, the completion is refined iteratively over boxes of increasing size.
 
-```
-                ┌──────────────────────────┐   no    ┌─────────────────────────────────────────┐
- image + modal  │ Guidance Decision Module │ ──────▶ │ box: modal box + 10%,  prompt: category │──┐
- mask ─────────▶│ (InternVL3.5-8B)         │         └─────────────────────────────────────────┘  │
-                └────────────┬─────────────┘                                                      │
-                             │ yes                                                                ▼
-                ┌────────────▼─────────────┐                              ┌──────────────────────────────────┐
-                │ Geometric Guidance       │  tight/moderate/coarse boxes │ SD2 inpainting of (occluders ∩   │
-                │ Semantic Guidance        │ ───────────────────────────▶ │ box) → SAM → amodal mask.        │
-                │ (GPT-4o)                 │  SD prompt                   │ Mask touches the box? next scale │
-                └──────────────────────────┘                              └──────────────────────────────────┘
-```
+<p align="center">
+  <a href="assets/mainfigure.pdf"><img src="assets/mainfigure.png" alt="Overview of AmodalCG" width="100%"></a>
+</p>
 
 ## Installation
 
